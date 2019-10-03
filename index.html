@@ -31,12 +31,14 @@
 
     <!--end::Layout Skins -->
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico"/>
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body style="background-image: url(assets/media/demos/demo8/bg-1.jpg)"
+<body style="background-image: url(assets/media/bg/bg-3.jpg)"
       class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
 <!-- begin:: Page -->
@@ -44,7 +46,7 @@
 <!-- begin:: Header Mobile -->
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
-        <a href="index&demo=demo8.html">
+        <a>
             <img alt="Logo" src="assets/media/logos/logo-8-sm.png"/>
         </a>
     </div>
@@ -68,10 +70,10 @@
                         <!-- begin:: Brand -->
                         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                             <div class="kt-header__brand-logo">
-                                <a href="index&demo=demo8.html">
+                                <a>
                                     <img alt="Logo" src="assets/media/logos/aceekret_logo_sm.png"
                                          class="kt-header__brand-logo-default"/>
-                                    <img alt="Logo" src="assets/media/logos/logo-8-inverse.png"
+                                    <img alt="Logo" src="assets/media/logos/aceekret_logo_sm.png"
                                          class="kt-header__brand-logo-sticky"/>
                                 </a>
                             </div>
@@ -95,19 +97,19 @@
                                 <ul class="kt-menu__nav ">
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel"
                                         data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                            href="index&demo=demo8.html" class="kt-menu__link kt-menu__toggle"><span
+                                            class="kt-menu__link kt-menu__toggle" id="view1_menu_link"><span
                                             class="kt-menu__link-text">Daily Market Views</span></a></li>
                                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"
-                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;"
-                                                                                                   class="kt-menu__link kt-menu__toggle"><span
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a
+                                            class="kt-menu__link kt-menu__toggle" id="view2_menu_link"><span
                                             class="kt-menu__link-text">Daily Market Views (5yr-lookback)</span></a></li>
                                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"
-                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;"
-                                                                                                   class="kt-menu__link kt-menu__toggle"><span
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a
+                                            class="kt-menu__link kt-menu__toggle" id="view3_menu_link"><span
                                             class="kt-menu__link-text">Intraday Market Views</span></a></li>
                                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"
-                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;"
-                                                                                                   class="kt-menu__link kt-menu__toggle"><span
+                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a
+                                            class="kt-menu__link kt-menu__toggle" id="view4_menu_link"><span
                                             class="kt-menu__link-text">User Guide</span></a></li>
                                     </li>
                                 </ul>
@@ -123,10 +125,10 @@
             <div class="kt-container  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch">
                 <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch"
                      id="kt_body">
-                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="view1">
 
                         <!-- begin:: Subheader -->
-                        <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+                        <div class="kt-subheader   kt-grid__item" id="kt_subheader1">
                             <div class="kt-container ">
                                 <div class="kt-subheader__main">
                                     <h3 class="kt-subheader__title">
@@ -183,161 +185,162 @@
                                         <div class="row row-full-height">
 
                                             <div class="col col-sm-12 col-md-12 col-lg-6">
-                                                    <div class="kt-portlet__body">
-                                                        <div class="form-group row">
-                                                            <label class="col-form-label col-lg-3 col-sm-12">Account
-                                                                ID</label>
-                                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                                <select class="form-control kt-selectpicker">
-                                                                    <option>fintest01</option>
-                                                                </select>
-                                                            </div>
+                                                <div class="kt-portlet__body">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Account
+                                                            ID</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker">
+                                                                <option>fintest01</option>
+                                                            </select>
                                                         </div>
-
-                                                        <div class="form-group row">
-                                                            <label class="col-form-label col-lg-3 col-sm-12">Trade
-                                                                Ticker</label>
-                                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                                <select class="form-control kt-selectpicker"
-                                                                        name="tradeticker">
-                                                                    <option selected>AGG</option>
-                                                                    <option>ARGT</option>
-                                                                    <option>CROC</option>
-                                                                    <option>DXJ</option>
-                                                                    <option>EEM</option>
-                                                                    <option>EUO</option>
-                                                                    <option>EWG</option>
-                                                                    <option>EWH</option>
-                                                                    <option>EWJ</option>
-                                                                    <option>EWU</option>
-                                                                    <option>EWW</option>
-                                                                    <option>EWZ</option>
-                                                                    <option>FXY</option>
-                                                                    <option>GDX</option>
-                                                                    <option>GDXJ</option>
-                                                                    <option>GLD</option>
-                                                                    <option>GREK</option>
-                                                                    <option>HEDJ</option>
-                                                                    <option>HYG</option>
-                                                                    <option>IBB</option>
-                                                                    <option>IEFA</option>
-                                                                    <option>INR</option>
-                                                                    <option>IWM</option>
-                                                                    <option>IYR</option>
-                                                                    <option>KRE</option>
-                                                                    <option>KSA</option>
-                                                                    <option>LQD</option>
-                                                                    <option>MDY</option>
-                                                                    <option>OIH</option>
-                                                                    <option>PIN</option>
-                                                                    <option>SHY</option>
-                                                                    <option>SLV</option>
-                                                                    <option>SMH</option>
-                                                                    <option>SPY</option>
-                                                                    <option>QQQ</option>
-                                                                    <option>RSX</option>
-                                                                    <option>RTH</option>
-                                                                    <option>THD</option>
-                                                                    <option>TLT</option>
-                                                                    <option>TUR</option>
-                                                                    <option>VGK</option>
-                                                                    <option>VIX</option>
-                                                                    <option>USO</option>
-                                                                    <option>XBI</option>
-                                                                    <option>XHB</option>
-                                                                    <option>XME</option>
-                                                                    <option>XLB</option>
-                                                                    <option>XLE</option>
-                                                                    <option>XLF</option>
-                                                                    <option>XLI</option>
-                                                                    <option>XLK</option>
-                                                                    <option>XLP</option>
-                                                                    <option>XLV</option>
-                                                                    <option>XLU</option>
-                                                                    <option>XLY</option>
-                                                                    <option>XOM</option>
-                                                                    <option>XRT</option>
-                                                                    <option>YCS</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-form-label col-lg-3 col-sm-12">Horizon
-                                                                (Days)</label>
-                                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                                <select class="form-control kt-selectpicker"
-                                                                        name="horizon">
-                                                                    <option selected>40</option>
-                                                                    <option>20</option>
-                                                                    <option>15</option>
-                                                                    <option>10</option>
-                                                                    <option>5</option>
-                                                                    <option>3</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-form-label col-lg-3 col-sm-12">Horizon
-                                                                (Days)</label>
-                                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                                <select class="form-control kt-selectpicker"
-                                                                        name="view">
-                                                                    <option selected>CurrentSignals</option>
-                                                                    <option>AllIndicators</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <button type="button" class="btn btn-primary"><i
-                                                                class="fa fa-search"></i> Submit Request
-                                                        </button>&nbsp;
                                                     </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Trade
+                                                            Ticker</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker"
+                                                                    name="tradeticker">
+                                                                <option selected>AGG</option>
+                                                                <option>ARGT</option>
+                                                                <option>CROC</option>
+                                                                <option>DXJ</option>
+                                                                <option>EEM</option>
+                                                                <option>EUO</option>
+                                                                <option>EWG</option>
+                                                                <option>EWH</option>
+                                                                <option>EWJ</option>
+                                                                <option>EWU</option>
+                                                                <option>EWW</option>
+                                                                <option>EWZ</option>
+                                                                <option>FXY</option>
+                                                                <option>GDX</option>
+                                                                <option>GDXJ</option>
+                                                                <option>GLD</option>
+                                                                <option>GREK</option>
+                                                                <option>HEDJ</option>
+                                                                <option>HYG</option>
+                                                                <option>IBB</option>
+                                                                <option>IEFA</option>
+                                                                <option>INR</option>
+                                                                <option>IWM</option>
+                                                                <option>IYR</option>
+                                                                <option>KRE</option>
+                                                                <option>KSA</option>
+                                                                <option>LQD</option>
+                                                                <option>MDY</option>
+                                                                <option>OIH</option>
+                                                                <option>PIN</option>
+                                                                <option>SHY</option>
+                                                                <option>SLV</option>
+                                                                <option>SMH</option>
+                                                                <option>SPY</option>
+                                                                <option>QQQ</option>
+                                                                <option>RSX</option>
+                                                                <option>RTH</option>
+                                                                <option>THD</option>
+                                                                <option>TLT</option>
+                                                                <option>TUR</option>
+                                                                <option>VGK</option>
+                                                                <option>VIX</option>
+                                                                <option>USO</option>
+                                                                <option>XBI</option>
+                                                                <option>XHB</option>
+                                                                <option>XME</option>
+                                                                <option>XLB</option>
+                                                                <option>XLE</option>
+                                                                <option>XLF</option>
+                                                                <option>XLI</option>
+                                                                <option>XLK</option>
+                                                                <option>XLP</option>
+                                                                <option>XLV</option>
+                                                                <option>XLU</option>
+                                                                <option>XLY</option>
+                                                                <option>XOM</option>
+                                                                <option>XRT</option>
+                                                                <option>YCS</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Horizon
+                                                            (Days)</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker"
+                                                                    name="horizon">
+                                                                <option selected>40</option>
+                                                                <option>20</option>
+                                                                <option>15</option>
+                                                                <option>10</option>
+                                                                <option>5</option>
+                                                                <option>3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Horizon
+                                                            (Days)</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker"
+                                                                    name="view">
+                                                                <option selected>CurrentSignals</option>
+                                                                <option>AllIndicators</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary"><i
+                                                            class="fa fa-search" name="submit_request_best"
+                                                            value="Submit Request"></i> Submit Request
+                                                    </button>&nbsp;
+                                                </div>
                                             </div>
                                             <div class="col col-sm-12 col-md-12 col-lg-6">
-                                                    <div class="kt-portlet__body">
-                                                        <div class="form-group form-group-last">
-                                                            <div class="alert alert-secondary" role="alert">
-                                                                <div class="alert-icon"><i
-                                                                        class="flaticon-list kt-font-brand"></i>
-                                                                </div>
-                                                                <div class="alert-text">
-                                                                    <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/DashboardL1_Current.html"
-                                                                       rel="nofollow" target="_blank">Current
-                                                                        Dashboard (accuracy &gt; 95%)</a>
-                                                                </div>
+                                                <div class="kt-portlet__body">
+                                                    <div class="form-group form-group-last">
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
                                                             </div>
-                                                            <div class="alert alert-secondary" role="alert">
-                                                                <div class="alert-icon"><i
-                                                                        class="flaticon-list kt-font-brand"></i>
-                                                                </div>
-                                                                <div class="alert-text">
-                                                                    <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/DashboardL2_Current.html"
-                                                                       rel="nofollow" target="_blank">Current
-                                                                        Dashboard (accuracy &gt; 85%)</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="alert alert-secondary" role="alert">
-                                                                <div class="alert-icon"><i
-                                                                        class="flaticon-list kt-font-brand"></i>
-                                                                </div>
-                                                                <div class="alert-text">
-                                                                    <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/DashboardL3_Current.html"
-                                                                       rel="nofollow" target="_blank">Current
-                                                                        Dashboard Short-Only (accuracy &gt; 80%)</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="alert alert-secondary" role="alert">
-                                                                <div class="alert-icon"><i
-                                                                        class="flaticon-list kt-font-brand"></i>
-                                                                </div>
-                                                                <div class="alert-text">
-                                                                    <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/Dashboard_Current.html"
-                                                                       rel="nofollow" target="_blank">Current
-                                                                        Dashboard (accuracy &gt; 75%)</a>
-                                                                </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/DashboardL1_Current.html"
+                                                                   rel="nofollow" target="_blank">Current
+                                                                    Dashboard (accuracy &gt; 95%)</a>
                                                             </div>
                                                         </div>
-
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/DashboardL2_Current.html"
+                                                                   rel="nofollow" target="_blank">Current
+                                                                    Dashboard (accuracy &gt; 85%)</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/DashboardL3_Current.html"
+                                                                   rel="nofollow" target="_blank">Current
+                                                                    Dashboard Short-Only (accuracy &gt; 80%)</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/Dashboard_Current.html"
+                                                                   rel="nofollow" target="_blank">Current
+                                                                    Dashboard (accuracy &gt; 75%)</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
+
+                                                </div>
 
                                             </div>
                                         </div>
@@ -349,6 +352,363 @@
 
                         <!-- end:: Content -->
                     </div>
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="view2">
+
+                        <!-- begin:: Subheader -->
+                        <div class="kt-subheader   kt-grid__item" id="kt_subheader2">
+                            <div class="kt-container ">
+                                <div class="kt-subheader__main">
+                                    <h3 class="kt-subheader__title">
+                                        Dashboard </h3>
+                                    <span class="kt-subheader__separator kt-hidden"></span>
+                                    <div class="kt-subheader__breadcrumbs">
+                                        <a href="#" class="kt-subheader__breadcrumbs-home"><i
+                                                class="flaticon2-shelter"></i></a>
+                                        <span class="kt-subheader__breadcrumbs-separator"></span>
+                                        <a href="" class="kt-subheader__breadcrumbs-link">
+                                            Daily Market Views (5yr-lookback) </a>
+
+                                        <!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- end:: Subheader -->
+
+                        <!-- begin:: Content -->
+                        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+
+
+                            <!--Begin::Dashboard 4-->
+
+                            <!--Begin::Row-->
+                            <div class="row">
+                                <form class="kt-form" action="./submit_request_best_5yr.php" method="post"
+                                      enctype="multipart/form-data"
+                                      target="_blank">
+                                    <div class="col col-sm-12 col-md-12 col-lg-12">
+                                        <div class="row row-full-height">
+                                            <div class="form-group form-group-last">
+                                                <div class="alert alert-secondary" role="alert">
+                                                    <div class="alert-icon"><i
+                                                            class="flaticon-warning kt-font-brand"></i></div>
+                                                    <div class="alert-text">
+                                                        Disclaimer:<br/>
+                                                        None of the content published on gavrishchaka.net or
+                                                        aceekret.com constitutes a recommendation that any particular
+                                                        security, portfolio of securities, transaction or investment
+                                                        strategy is suitable for any specific person or institutional
+                                                        investor. Reports provided on this site are intended solely for
+                                                        informational purposes. No guarantee of any kind is implied or
+                                                        possible where projections of future conditions are attempted.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-12">
+
+                                        <div class="row row-full-height">
+
+                                            <div class="col col-sm-12 col-md-12 col-lg-6">
+                                                <div class="kt-portlet__body">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Account
+                                                            ID</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker">
+                                                                <option>fintest01</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Trade
+                                                            Ticker</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker"
+                                                                    name="tradeticker">
+                                                                <option selected>AGG</option>
+                                                                <option>ARGT</option>
+                                                                <option>CROC</option>
+                                                                <option>DXJ</option>
+                                                                <option>EEM</option>
+                                                                <option>EUO</option>
+                                                                <option>EWG</option>
+                                                                <option>EWH</option>
+                                                                <option>EWJ</option>
+                                                                <option>EWU</option>
+                                                                <option>EWW</option>
+                                                                <option>EWZ</option>
+                                                                <option>FXY</option>
+                                                                <option>GDX</option>
+                                                                <option>GDXJ</option>
+                                                                <option>GLD</option>
+                                                                <option>GREK</option>
+                                                                <option>HEDJ</option>
+                                                                <option>HYG</option>
+                                                                <option>IBB</option>
+                                                                <option>IEFA</option>
+                                                                <option>INR</option>
+                                                                <option>IWM</option>
+                                                                <option>IYR</option>
+                                                                <option>KRE</option>
+                                                                <option>KSA</option>
+                                                                <option>LQD</option>
+                                                                <option>MDY</option>
+                                                                <option>OIH</option>
+                                                                <option>PIN</option>
+                                                                <option>SHY</option>
+                                                                <option>SLV</option>
+                                                                <option>SMH</option>
+                                                                <option>SPY</option>
+                                                                <option>QQQ</option>
+                                                                <option>RSX</option>
+                                                                <option>RTH</option>
+                                                                <option>THD</option>
+                                                                <option>TLT</option>
+                                                                <option>TUR</option>
+                                                                <option>VGK</option>
+                                                                <option>VIX</option>
+                                                                <option>USO</option>
+                                                                <option>XBI</option>
+                                                                <option>XHB</option>
+                                                                <option>XME</option>
+                                                                <option>XLB</option>
+                                                                <option>XLE</option>
+                                                                <option>XLF</option>
+                                                                <option>XLI</option>
+                                                                <option>XLK</option>
+                                                                <option>XLP</option>
+                                                                <option>XLV</option>
+                                                                <option>XLU</option>
+                                                                <option>XLY</option>
+                                                                <option>XOM</option>
+                                                                <option>XRT</option>
+                                                                <option>YCS</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Horizon
+                                                            (Days)</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker"
+                                                                    name="horizon">
+                                                                <option selected>40</option>
+                                                                <option>20</option>
+                                                                <option>15</option>
+                                                                <option>10</option>
+                                                                <option>5</option>
+                                                                <option>3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-lg-3 col-sm-12">Horizon
+                                                            (Days)</label>
+                                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                                            <select class="form-control kt-selectpicker"
+                                                                    name="view">
+                                                                <option selected>CurrentSignals</option>
+                                                                <option>AllIndicators</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary"><i
+                                                            class="fa fa-search" name="submit_request_best_5yr"
+                                                            value="Submit Request 5yr"></i> Submit Request 5yr
+                                                    </button>&nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="col col-sm-12 col-md-12 col-lg-6">
+                                                <div class="kt-portlet__body">
+                                                    <div class="form-group form-group-last">
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/Dashboard5yrL1_Current.html"
+                                                                   rel="nofollow" target="_blank">Current
+                                                                    Dashboard (accuracy &gt; 95%)</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/Dashboard5yr_Current.html"
+                                                                   rel="nofollow" target="_blank">Current
+                                                                    Dashboard (accuracy &gt; 85%)</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <!-- end:: Content -->
+                    </div>
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="view3">
+
+                        <!-- begin:: Subheader -->
+                        <div class="kt-subheader   kt-grid__item" id="kt_subheader3">
+                            <div class="kt-container ">
+                                <div class="kt-subheader__main">
+                                    <h3 class="kt-subheader__title">
+                                        Dashboard </h3>
+                                    <span class="kt-subheader__separator kt-hidden"></span>
+                                    <div class="kt-subheader__breadcrumbs">
+                                        <a href="#" class="kt-subheader__breadcrumbs-home"><i
+                                                class="flaticon2-shelter"></i></a>
+                                        <span class="kt-subheader__breadcrumbs-separator"></span>
+                                        <a href="" class="kt-subheader__breadcrumbs-link">
+                                            Intraday Indicators </a>
+
+                                        <!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- end:: Subheader -->
+
+                        <!-- begin:: Content -->
+                        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+
+
+                            <!--Begin::Dashboard 4-->
+
+                            <!--Begin::Row-->
+                            <div class="row">
+                                <form class="kt-form" action="./submit_request_best.php" method="post"
+                                      enctype="multipart/form-data"
+                                      target="_blank">
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <!-- end:: Content -->
+                    </div>
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="view4">
+
+                        <!-- begin:: Subheader -->
+                        <div class="kt-subheader   kt-grid__item" id="kt_subheader4">
+                            <div class="kt-container ">
+                                <div class="kt-subheader__main">
+                                    <h3 class="kt-subheader__title">
+                                        Dashboard </h3>
+                                    <span class="kt-subheader__separator kt-hidden"></span>
+                                    <div class="kt-subheader__breadcrumbs">
+                                        <a href="#" class="kt-subheader__breadcrumbs-home"><i
+                                                class="flaticon2-shelter"></i></a>
+                                        <span class="kt-subheader__breadcrumbs-separator"></span>
+                                        <a href="" class="kt-subheader__breadcrumbs-link">
+                                            User Guide </a>
+
+                                        <!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- end:: Subheader -->
+
+                        <!-- begin:: Content -->
+                        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+
+
+                            <!--Begin::Dashboard 4-->
+
+                            <!--Begin::Row-->
+                            <div class="row">
+                                    <div class="col col-sm-12 col-md-12 col-lg-12">
+                                        <div class="row row-full-height">
+                                            <div class="form-group form-group-last">
+                                                <div class="alert alert-secondary" role="alert">
+                                                    <div class="alert-icon"><i
+                                                            class="flaticon-warning kt-font-brand"></i></div>
+                                                    <div class="alert-text">
+                                                        Disclaimer:<br/>
+                                                        None of the content published on gavrishchaka.net or
+                                                        aceekret.com constitutes a recommendation that any particular
+                                                        security, portfolio of securities, transaction or investment
+                                                        strategy is suitable for any specific person or institutional
+                                                        investor. Reports provided on this site are intended solely for
+                                                        informational purposes. No guarantee of any kind is implied or
+                                                        possible where projections of future conditions are attempted.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-12">
+
+                                        <div class="row row-full-height">
+                                            <div class="col col-sm-12 col-md-12 col-lg-6">
+                                                <div class="kt-portlet__body">
+                                                    <div class="form-group form-group-last">
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/AceekretSummary.pdf"
+                                                                   rel="nofollow" target="_blank">Summary</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/AceekretUserGuide.pdf"
+                                                                   rel="nofollow" target="_blank">User Guide</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/AceekretEngineInNutshell.pdf"
+                                                                   rel="nofollow" target="_blank">Engine in Nutshell</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alert alert-secondary" role="alert" style="margin: 0px">
+                                                            <div class="alert-icon"><i
+                                                                    class="flaticon-list kt-font-brand"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <a href="http://www.gavrishchaka.net/user_output_files/results/fin/Daily_Signals_for_Tradable_Events_and_Regime_Changes/AceekretMethodologyOverview.pdf"
+                                                                   rel="nofollow" target="_blank">Methodology Overview</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </div>
+
+                        <!-- end:: Content -->
+                    </div>
+
                 </div>
             </div>
 
@@ -357,13 +717,13 @@
                 <div class="kt-container ">
                     <div class="kt-footer__wrapper">
                         <div class="kt-footer__copyright">
-                            2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank"
-                                                     class="kt-link">Keenthemes</a>
+                            2019&nbsp;&copy;&nbsp;<a href="http://www.aceekret.com" target="_blank"
+                                                     class="kt-link">Aceekret</a>
                         </div>
                         <div class="kt-footer__menu">
-                            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">About</a>
-                            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Team</a>
-                            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Contact</a>
+                            <a href="http://www.aceekret.com/about-us" target="_blank" class="kt-link">About</a>
+                            <a href="http://www.aceekret.com/our-team-2" target="_blank" class="kt-link">Team</a>
+                            <a href="http://www.aceekret.com/contact-us" target="_blank" class="kt-link">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -397,6 +757,57 @@
             }
         }
     };
+    $(document).ready(function () {
+        $("#view1").show()
+        $("#view2").hide()
+        $("#view3").hide()
+        $("#view4").hide()
+    })
+    $("#view1_menu_link").click(function () {
+        $("#view1").show()
+        $("#view2").hide()
+        $("#view3").hide()
+        $("#view4").hide()
+        $("#view2_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view3_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view4_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view1_menu_link").parent().addClass("kt-menu__item--open kt-menu__item--here")
+
+    })
+    $("#view2_menu_link").click(function () {
+        $("#view2").show()
+        $("#view1").hide()
+        $("#view3").hide()
+        $("#view4").hide()
+        $("#view1_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view3_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view4_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view2_menu_link").parent().addClass("kt-menu__item--open kt-menu__item--here")
+    })
+    $("#view3_menu_link").click(function () {
+        $("#view3").show()
+        $("#view2").hide()
+        $("#view1").hide()
+        $("#view4").hide()
+        $("#view1_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view2_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view4_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view3_menu_link").parent().addClass("kt-menu__item--open kt-menu__item--here")
+
+    })
+    $("#view4_menu_link").click(function () {
+        $("#view4").show()
+        $("#view2").hide()
+        $("#view3").hide()
+        $("#view1").hide()
+        $("#view1_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view3_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view2_menu_link").parent().removeClass("kt-menu__item--open kt-menu__item--here")
+        $("#view4_menu_link").parent().addClass("kt-menu__item--open kt-menu__item--here")
+
+    })
+
+
 </script>
 
 <!-- end::Global Config -->
