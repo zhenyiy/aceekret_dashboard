@@ -1,0 +1,14 @@
+[
+  {
+    "strategy": "S01",
+    "ticker": ["ALL_EQUAL_CAPITAL","IYR","VNQ"],
+    "backtest": ["3", "5", "7"]
+
+  },
+  {
+    "strategy": "S02",
+    "ticker": ["ALL_EQUAL_CAPITAL","SPG","SLG"],
+    "backtest": ["7", "10", "12"]
+
+  }
+]
